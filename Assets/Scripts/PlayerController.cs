@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     private int count;
     public float speed;
     public Text countText;
+    public Text winText;
 
     public void Start()
     {
@@ -40,5 +41,9 @@ public class PlayerController : MonoBehaviour
     public void UpdateCountText()
     {
         countText.text = "Count: " + count.ToString();
+        if(count >= 12)
+        {
+            winText.text = "You Win!";
+        }
     }
 }
