@@ -5,11 +5,13 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody rb;
+    private int count;
     public float speed;
 
     public void Start()
     {
         rb = GetComponent<Rigidbody>();
+        count = 0;
     }
     public void FixedUpdate()
     {
@@ -27,6 +29,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("PickupItem"))
         {
             other.gameObject.SetActive(false);
+            count++;
         }
     }
 }
