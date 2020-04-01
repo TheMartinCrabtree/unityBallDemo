@@ -433,7 +433,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Counter:'
+  m_Text: 'Counter: '
 --- !u!222 &613155503
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1584,6 +1584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  countText: {fileID: 613155502}
 --- !u!54 &1644325353
 Rigidbody:
   m_ObjectHideFlags: 0
