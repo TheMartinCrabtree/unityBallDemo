@@ -1,17 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody rb;
     private int count;
     public float speed;
+    public Text countText;
 
     public void Start()
     {
         rb = GetComponent<Rigidbody>();
         count = 0;
+        UpdateCountText();
     }
     public void FixedUpdate()
     {
@@ -30,6 +33,12 @@ public class PlayerController : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             count++;
+            UpdateCountText();
         }
+    }
+
+    private void UpdateCountText()
+    {
+        countText.text = "Count: " + count.ToString();
     }
 }
